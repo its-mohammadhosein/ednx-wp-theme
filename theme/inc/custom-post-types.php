@@ -39,6 +39,12 @@
  * - ednx_event_date       (string)  e.g. "2026-12-30"
  * - ednx_event_time       (string)  e.g. "10:00 AM - 2:00 PM"
  * - ednx_event_location   (string)
+ * - ednx_event_type       (string)  e.g. "Design workshop"
+ * - ednx_seats_left       (int)
+ * - ednx_seats_total      (int)
+ * - ednx_event_price      (float)   current price; 0 or empty = Free
+ * - ednx_host_id          (int)     post ID of an `instructor` post
+ * - ednx_includes         (string)  newline-separated "this event includes" bullets (shared key with `course`)
  *
  * @package tutorial
  */
@@ -129,3 +135,18 @@ function ednx_register_post_types() {
 	);
 }
 add_action( 'init', 'ednx_register_post_types' );
+
+/**
+ * Order the events archive by event date (soonest first) instead of
+ * publish date, falling back to publish date for events with no
+ * ednx_event_date meta set.
+ *
+ * @param WP_Query $query The main query.
+ */
+function ednx_order_events_by_date( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'event' ) ) {
+		$query->set( 'meta_key', 'ednx_event_date' ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		$query->set( 'orderby', array( 'meta_value' => 'ASC', 'date' => 'DESC' ) );
+	}
+}
+add_action( 'pre_get_posts', 'ednx_order_events_by_date' );
