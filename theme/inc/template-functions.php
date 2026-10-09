@@ -6,6 +6,26 @@
  */
 
 /**
+ * Get a custom field value with a fallback default.
+ *
+ * Small helper around get_post_meta() for the course/instructor/event meta
+ * keys documented in inc/custom-post-types.php, so templates don't need to
+ * repeat the empty-string check everywhere.
+ *
+ * @param string $key     Meta key (without leading underscore).
+ * @param mixed  $default Value to return when the meta field is empty.
+ * @param int    $post_id Post ID. Defaults to the current post in the loop.
+ *
+ * @return mixed
+ */
+function ednx_meta( $key, $default = '', $post_id = null ) {
+	$post_id = $post_id ? $post_id : get_the_ID();
+	$value   = get_post_meta( $post_id, $key, true );
+
+	return '' !== $value && null !== $value ? $value : $default;
+}
+
+/**
  * Add the Edunex `has-dropdown` class to any menu item that has children,
  * so the ported `main.css`/`main.js` dropdown behavior keeps working.
  *

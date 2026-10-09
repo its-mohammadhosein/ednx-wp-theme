@@ -7,6 +7,34 @@
  * they're registered here as custom post types rather than converted into
  * plain WordPress pages.
  *
+ * Summary data not covered by core fields (price, lesson count, rating,
+ * etc.) uses plain custom fields rather than a page builder plugin like
+ * ACF, to avoid adding a dependency. Recognized meta keys:
+ *
+ * `course` post type:
+ * - ednx_level            (string)  e.g. "Beginner", "Intermediate", "Expert"
+ * - ednx_lessons          (int)     lesson count
+ * - ednx_duration         (string)  e.g. "6h 30m"
+ * - ednx_students         (string)  e.g. "2.1k"
+ * - ednx_rating           (float)   e.g. 4.9
+ * - ednx_rating_count     (string)  e.g. "3K+"
+ * - ednx_price            (float)   current price; 0 or empty = Free
+ * - ednx_sale_price       (float)   optional original price shown struck through
+ * - ednx_badge            (string)  e.g. "Popular", "New"
+ * - ednx_instructor_id    (int)     post ID of an `instructor` post
+ * - ednx_video_url        (string)  preview video URL for the sidebar play button
+ * - ednx_includes         (string)  newline-separated "this course includes" bullets
+ *
+ * `instructor` post type:
+ * - ednx_designation      (string)  e.g. "Senior Web Developer"
+ * - ednx_social_facebook, ednx_social_instagram, ednx_social_x,
+ *   ednx_social_linkedin  (string URLs)
+ *
+ * `event` post type:
+ * - ednx_event_date       (string)  e.g. "2026-12-30"
+ * - ednx_event_time       (string)  e.g. "10:00 AM - 2:00 PM"
+ * - ednx_event_location   (string)
+ *
  * @package tutorial
  */
 
@@ -33,6 +61,21 @@ function ednx_register_post_types() {
 			'menu_icon'    => 'dashicons-welcome-learn-more',
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
 			'rewrite'      => array( 'slug' => 'courses' ),
+		)
+	);
+
+	register_taxonomy(
+		'course_category',
+		'course',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Course Categories', 'ednx' ),
+				'singular_name' => __( 'Course Category', 'ednx' ),
+			),
+			'public'       => true,
+			'hierarchical' => true,
+			'show_in_rest' => true,
+			'rewrite'      => array( 'slug' => 'course-category' ),
 		)
 	);
 
