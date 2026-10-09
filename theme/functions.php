@@ -145,6 +145,34 @@ add_action( 'widgets_init', 'ednx_widgets_init' );
  */
 function ednx_scripts() {
 	wp_enqueue_style( 'ednx-style', get_stylesheet_uri(), array(), EDNX_VERSION );
+
+	// Edunex template assets.
+	wp_enqueue_style( 'ednx-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-icons', get_template_directory_uri() . '/assets/css/edunex-icons.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-nice-select', get_template_directory_uri() . '/assets/css/nice-select.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-swiper', get_template_directory_uri() . '/assets/css/swiper.min.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-venobox', get_template_directory_uri() . '/assets/css/venobox.min.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-shop', get_template_directory_uri() . '/assets/css/shop.css', array(), EDNX_VERSION );
+	wp_enqueue_style( 'ednx-main', get_template_directory_uri() . '/assets/css/main.css', array( 'ednx-bootstrap' ), EDNX_VERSION );
+
+	wp_enqueue_script( 'ednx-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array( 'ednx-jquery' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-nice-select-js', get_template_directory_uri() . '/assets/js/jquery.nice-select.min.js', array( 'ednx-jquery' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-swiper-js', get_template_directory_uri() . '/assets/js/swiper.min.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-meanmenu-js', get_template_directory_uri() . '/assets/js/meanmenu.js', array( 'ednx-jquery' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-venobox-js', get_template_directory_uri() . '/assets/js/venobox.min.js', array( 'ednx-jquery' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-isotope-js', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-imagesloaded-js', get_template_directory_uri() . '/assets/js/imagesloaded-pkgd.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-range-slider-js', get_template_directory_uri() . '/assets/js/range-slider.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap', get_template_directory_uri() . '/assets/js/gsap.min.js', array(), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap-scroll-trigger', get_template_directory_uri() . '/assets/js/gsap-scroll-trigger.min.js', array( 'ednx-gsap' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap-scroll-to-plugin', get_template_directory_uri() . '/assets/js/gsap-scroll-to-plugin.min.js', array( 'ednx-gsap' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap-scroll-smoother', get_template_directory_uri() . '/assets/js/gsap-scroll-smoother.js', array( 'ednx-gsap-scroll-trigger' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap-split-text', get_template_directory_uri() . '/assets/js/gsap-split-text.min.js', array( 'ednx-gsap' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-gsap-animation', get_template_directory_uri() . '/assets/js/gsap-animation.js', array( 'ednx-gsap-scroll-trigger', 'ednx-gsap-split-text' ), EDNX_VERSION, true );
+	wp_enqueue_script( 'ednx-template-main', get_template_directory_uri() . '/assets/js/main.js', array( 'ednx-jquery', 'ednx-bootstrap-js' ), EDNX_VERSION, true );
+
 	wp_enqueue_script( 'ednx-script', get_template_directory_uri() . '/js/script.min.js', array(), EDNX_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

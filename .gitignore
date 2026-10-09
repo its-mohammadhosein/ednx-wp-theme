@@ -2,8 +2,9 @@
 /node_modules
 /vendor
 
-# Ignore generated JavaScript files:
-*.min.js
+# Ignore generated JavaScript files (esbuild output; does not cover
+# vendored libraries under theme/assets/):
+/theme/js/*.min.js
 
 # Ignore generated CSS files:
 style.css

@@ -6,6 +6,49 @@
  */
 
 /**
+ * Add the Edunex `has-dropdown` class to any menu item that has children,
+ * so the ported `main.css`/`main.js` dropdown behavior keeps working.
+ *
+ * @param array $items Array of menu item objects.
+ *
+ * @return array
+ */
+function ednx_nav_menu_add_has_dropdown_class( $items ) {
+	$parent_ids = wp_list_pluck( $items, 'menu_item_parent' );
+
+	foreach ( $items as $item ) {
+		if ( in_array( (string) $item->ID, $parent_ids, true ) ) {
+			$item->classes[] = 'has-dropdown';
+		}
+	}
+
+	return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'ednx_nav_menu_add_has_dropdown_class' );
+
+/**
+ * Outputs the Edunex primary navigation menu.
+ *
+ * Shared between the main header and the sticky duplicate header, so the
+ * `menu_id` is only added for the first (non-sticky) instance to avoid
+ * duplicate IDs on the page.
+ *
+ * @param bool $with_id Whether to output the `id="mobile-menu"` attribute.
+ */
+function ednx_primary_nav( $with_id = false ) {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => $with_id ? 'mobile-menu' : '',
+			'container'      => false,
+			'menu_class'     => 'mainmenu',
+			'items_wrap'     => $with_id ? '<nav id="%1$s" class="%2$s"><ul>%3$s</ul></nav>' : '<nav class="%2$s"><ul>%3$s</ul></nav>',
+			'fallback_cb'    => false,
+		)
+	);
+}
+
+/**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function ednx_pingback_header() {
