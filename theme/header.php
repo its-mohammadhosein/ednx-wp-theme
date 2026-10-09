@@ -124,5 +124,14 @@
 
 	<?php get_template_part( 'template-parts/layout/header', 'content' ); ?>
 
-	<div id="smooth-wrapper">
-		<div id="smooth-content">
+	<?php
+	/*
+	 * Note: the original template wraps page content in `#smooth-wrapper`/
+	 * `#smooth-content` so `gsap-animation.js` can initialize GSAP's
+	 * ScrollSmoother. That's intentionally omitted here — `gsap-animation.js`
+	 * only creates a ScrollSmoother instance when both IDs are present on the
+	 * page, so leaving them out cleanly disables it (no other GSAP animation
+	 * depends on them) while avoiding a layout bug where ScrollSmoother would
+	 * render content starting mid-page instead of at the top.
+	 */
+	?>
