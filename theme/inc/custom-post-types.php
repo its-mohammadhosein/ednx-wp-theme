@@ -27,6 +27,11 @@
  *
  * `instructor` post type:
  * - ednx_designation      (string)  e.g. "Senior Web Developer"
+ * - ednx_rating           (float)   e.g. 4.9
+ * - ednx_sessions         (int)     number of sessions taught
+ * - ednx_rate_per_hour    (float)   hourly rate; 0 or empty = not shown
+ * - ednx_response_rate    (string)  e.g. "98%"
+ * - ednx_response_time    (string)  e.g. "&lt; 2h"
  * - ednx_social_facebook, ednx_social_instagram, ednx_social_x,
  *   ednx_social_linkedin  (string URLs)
  *
