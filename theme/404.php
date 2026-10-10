@@ -52,7 +52,7 @@ get_header();
 								<span class="sec-subtitle"><i class="tji-subtitle"></i> <?php esc_html_e( 'Page not found', 'ednx' ); ?></span>
 								<h2 class="error-title"><?php esc_html_e( 'This Page Skipped Class.', 'ednx' ); ?></h2>
 								<div class="error-desc"><?php esc_html_e( "The page you're looking for was moved, renamed or never enrolled. Let's get you back to learning.", 'ednx' ); ?></div>
-								<div class="error-btn d-flex flex-wrap align-items-center justify-content-center gap-3">
+								<div class="error-btn d-flex align-items-center justify-content-center flex-wrap gap-3">
 									<a class="tj-btn-primary flip-text-wrap" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 										<span class="btn-text"><?php esc_html_e( 'Back to home', 'ednx' ); ?></span>
 										<span class="btn-icon"><i class="tji-arrow-right-2"></i></span>

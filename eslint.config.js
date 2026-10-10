@@ -14,7 +14,7 @@ const tailwindRules = tailwindRulesConfig?.rules || {};
 
 export default [
 	{
-		ignores: ['**/*.min.js', '**/vendor/'],
+		ignores: ['**/*.min.js', '**/vendor/', 'theme/assets/js/**'],
 	},
 	{
 		files: ['**/*.js'],

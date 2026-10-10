@@ -9,3 +9,6 @@
 
 # Ignore minified JavaScript:
 *.min.js
+
+# Ignore vendored Edunex template assets (ported as-is, not theme-authored):
+theme/assets/js/**

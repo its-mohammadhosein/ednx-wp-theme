@@ -184,7 +184,7 @@ while ( have_posts() ) :
                     </h2>
                   </div>
                   <div class="about-3-feature-list row rg-20 gx-0">
-                    <div class="col-12 tj-fade-anim" data-delay=".2">
+                    <div class="tj-fade-anim col-12" data-delay=".2">
                       <div class="about-3-feature">
                         <div class="about-3-feature-head">
                           <span class="about-3-feature-icon"><i class="tji-user-duo"></i></span>
@@ -195,7 +195,7 @@ while ( have_posts() ) :
                           personal growth, career success.</p>
                       </div>
                     </div>
-                    <div class="col-12 tj-fade-anim" data-delay=".4">
+                    <div class="tj-fade-anim col-12" data-delay=".4">
                       <div class="about-3-feature">
                         <div class="about-3-feature-head">
                           <span class="about-3-feature-icon"><i class="tji-book-2"></i></span>
@@ -427,7 +427,7 @@ while ( have_posts() ) :
         <section class="tj-testimonial-section-4 section-gap section-gap-x fix">
           <div class="container">
             <div class="row rg-30">
-              <div class="col-12 col-lg-5">
+              <div class="col-lg-5 col-12">
                 <div class="sec-heading about-testimonial-heading">
                   <span class="sec-subtitle tj-fade-anim" data-direction="top"><i class="tji-subtitle"></i>Students
                     feedback</span>
@@ -443,7 +443,7 @@ while ( have_posts() ) :
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-7">
+              <div class="col-lg-7 col-12">
                 <div class="tj-testimonial-wrapper-4 tj__slider-wrapper">
                   <div class="tj-testimonial-slider-3 swiper swiper-container tj-fade-anim" data-delay=".3">
                     <div class="swiper-wrapper">
@@ -679,7 +679,7 @@ while ( have_posts() ) :
               </div>
             </div>
             <div class="row rg-20 flex-lg-row flex-column-reverse">
-              <div class="col-12 col-xl-4 col-lg-5">
+              <div class="col-xl-4 col-lg-5 col-12">
                 <div class="support-box tj-fade-anim" data-duration=".6">
                   <div class="support-icon">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icons/support.png" alt="">
@@ -696,13 +696,13 @@ while ( have_posts() ) :
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-xl-8 col-lg-7">
+              <div class="col-xl-8 col-lg-7 col-12">
                 <div class="tj-faq-wrapper">
                   <div class="tj-faq" id="tjAccordion01">
                     <div class="tj-accordion-item tj-fade-anim" data-delay=".3" data-duration="0.6">
                       <button class="tj-accordion-title" type="button" data-bs-toggle="collapse"
                         data-bs-target="#accordion-1" aria-expanded="true">Can I host live coaching sessions?</button>
-                      <div id="accordion-1" class="collapse show" data-bs-parent="#tjAccordion01">
+                      <div id="accordion-1" class="show collapse" data-bs-parent="#tjAccordion01">
                         <div class="accordion-body tj-accordion-content">
                           Clients can view your availability, choose a suitable time slot, and book sessions online
                           through the built-in scheduling system. Organize and manage all your projects effortlessly in

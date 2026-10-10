@@ -20,7 +20,7 @@ get_header();
 		<section class="tj-page-header">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-lg-6">
+					<div class="col-lg-6 col-12">
 						<div class="tj-page-header-content">
 							<h1 class="tj-page-title"><?php post_type_archive_title(); ?></h1>
 							<div class="tj-page-link">

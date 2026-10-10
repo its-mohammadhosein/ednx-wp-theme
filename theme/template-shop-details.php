@@ -54,8 +54,8 @@ while ( have_posts() ) :
                 <div class="row section-gap-bottom product">
                   <div class="col-xl-6 col-lg-6">
                     <div
-                      class="tj-product-details-thumb-wrapper d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
-                      <div class="tj-product-thumb-items nav order-2 order-md-1" role="tablist"
+                      class="tj-product-details-thumb-wrapper d-flex flex-md-nowrap justify-content-center justify-content-md-between flex-wrap">
+                      <div class="tj-product-thumb-items nav order-md-1 order-2" role="tablist"
                         aria-orientation="vertical">
                         <button class="nav-link tj-pdt-thumb-img active" id="thumb-1-tab" data-bs-toggle="pill"
                           data-bs-target="#thumb-1" type="button" role="tab" aria-controls="thumb-1"
@@ -70,7 +70,7 @@ while ( have_posts() ) :
                           data-bs-target="#thumb-4" type="button" role="tab" aria-controls="thumb-4"
                           aria-selected="false"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product/product-1-4.webp" alt="images"></button>
                       </div>
-                      <div class="tab-content tj-product-img-wrap order-1 order-md-2">
+                      <div class="tab-content tj-product-img-wrap order-md-2 order-1">
                         <div class="tj-product-badge product-on-sale">
                           <span class="onsale">Sale</span>
                         </div>
@@ -188,7 +188,7 @@ while ( have_posts() ) :
                       <div class="tj-product-details-action-wrapper">
                         <div class="tj-product-details-action-wrapper">
                           <form class="cart" action="#" method="post">
-                            <div class="tj-product-details-action-item-wrapper d-flex flex-wrap align-items-center">
+                            <div class="tj-product-details-action-item-wrapper d-flex align-items-center flex-wrap">
                               <div class="tj-product-details-quantity">
                                 <div class="tj-product-quantity">
                                   <div class="quantity">

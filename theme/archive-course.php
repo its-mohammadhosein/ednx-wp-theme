@@ -22,7 +22,7 @@ get_header();
 		<section class="tj-page-header">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-lg-6">
+					<div class="col-lg-6 col-12">
 						<div class="tj-page-header-content">
 							<h1 class="tj-page-title"><?php post_type_archive_title(); ?></h1>
 							<div class="tj-page-link">
@@ -95,7 +95,7 @@ get_header();
 									</div>
 								</div>
 							</div>
-							<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+							<div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
 								<div class="tj-show-results">
 									<span class="course-show">
 										<?php
@@ -139,7 +139,7 @@ get_header();
 								?>
 								<div class="row">
 									<div class="col-12">
-										<div class="course-pagination-area d-flex flex-wrap align-items-center justify-content-between gap-3 tj-fade-anim">
+										<div class="course-pagination-area d-flex align-items-center justify-content-between tj-fade-anim flex-wrap gap-3">
 											<div class="tj-pagination">
 												<?php echo wp_kses_post( implode( '', $ednx_pagination_links ) ); ?>
 											</div>

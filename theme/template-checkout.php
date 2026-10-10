@@ -61,7 +61,7 @@ while ( have_posts() ) :
                             </div>
 
                             <form class="checkout_coupon woocommerce-form-coupon" method="post">
-                              <div class="d-flex align-items-center flex-wrap rg-30">
+                              <div class="d-flex align-items-center rg-30 flex-wrap">
                                 <div class="form-row form-row-first">
                                   <input type="text" name="coupon_code" class="input-text" placeholder="Coupon code"
                                     id="coupon_code" value="">

@@ -49,7 +49,7 @@ get_header();
 				<div class="row">
 					<div class="col-12">
 						<div class="tj-course-filter-wrap">
-							<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+							<div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
 								<div class="tj-show-results">
 									<span class="course-show">
 										<?php
@@ -112,7 +112,7 @@ get_header();
 								?>
 								<div class="row">
 									<div class="col-12">
-										<div class="course-pagination-area d-flex flex-wrap align-items-center justify-content-between tj-fade-anim gap-3">
+										<div class="course-pagination-area d-flex align-items-center justify-content-between tj-fade-anim flex-wrap gap-3">
 											<div class="tj-pagination">
 												<?php echo wp_kses_post( implode( '', $ednx_pagination_links ) ); ?>
 											</div>

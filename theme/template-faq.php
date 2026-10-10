@@ -84,7 +84,7 @@ while ( have_posts() ) :
                           <button class="tj-accordion-title" type="button" data-bs-toggle="collapse"
                             data-bs-target="#accordion-1" aria-expanded="true">Can I host live coaching
                             sessions?</button>
-                          <div id="accordion-1" class="collapse show" data-bs-parent="#tjAccordion01">
+                          <div id="accordion-1" class="show collapse" data-bs-parent="#tjAccordion01">
                             <div class="accordion-body tj-accordion-content">
                               Clients can view your availability, choose a suitable time slot, and book sessions online
                               through the built-in scheduling system. Organize and manage all your projects effortlessly

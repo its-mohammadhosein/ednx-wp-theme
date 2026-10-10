@@ -47,7 +47,7 @@ while ( have_posts() ) :
           <div class="container">
             <div class="row rg-50">
               <div class="col-xl-8 col-lg-8 col-md-12">
-                <div class="tj-shop-listing d-flex flex-wrap align-items-center mb-40 justify-content-between">
+                <div class="tj-shop-listing d-flex align-items-center justify-content-between mb-40 flex-wrap">
                   <div class="tj-shop-listing-number">
                     <p class="tj-shop-list-title">
                       Showing <strong>1–6</strong> of <strong>10</strong> results </p>

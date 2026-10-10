@@ -44,7 +44,7 @@ $ednx_featured_query = new WP_Query(
 						</div>
 					</div>
 					<?php if ( $ednx_featured_query->have_posts() ) : ?>
-						<div class="col-12 inner-gap-top">
+						<div class="inner-gap-top col-12">
 							<div class="tj-blog-wrap tj-fade-anim">
 								<?php
 								while ( $ednx_featured_query->have_posts() ) :
