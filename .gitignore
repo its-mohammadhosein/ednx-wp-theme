@@ -12,8 +12,9 @@ style-editor.css
 style-editor-extra.css
 tailwind-intellisense.css
 
-# Ignore the generated zip file:
-ednx.zip
+# Ignore the generated zip file(s), including versioned release zips:
+/ednx.zip
+/ednx-v*.zip
 
 # Ignore .DS_Store files from macOS:
 .DS_Store
